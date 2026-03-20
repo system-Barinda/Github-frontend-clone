@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, Search, Github } from "lucide-react";
-import HeaderActions from "./HeaderActions";
-
+import HeaderActions from "./HeaderActions"
 export default function Header() {
   const [open, setOpen] = useState(false);
 
