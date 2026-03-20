@@ -28,7 +28,7 @@ export default function Header() {
             <Menu size={20} />
           </button>
 
-          <Github size={28} />
+          <Github size={38} className="p-2 border border-[#30363d]  rounded-full" />
 
           <span className="hidden md:block text-[16px] font-semibold">
             Dashboard
