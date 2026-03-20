@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, BookOpen } from "lucide-react";
+import ProfileName from "../assets/profileName.png"
 
 interface Repo {
   id: number;
@@ -29,7 +30,7 @@ export default function Sidebar() {
       {/* USER */}
       <div className="flex items-center gap-3 mb-6">
         <img
-          src="https://i.pravatar.cc/40"
+          src={ProfileName}
           alt="profile"
           className="w-10 h-10 rounded-full"
         />
@@ -69,7 +70,7 @@ export default function Sidebar() {
             className="flex items-center gap-2 cursor-pointer hover:text-blue-400"
           >
             <img
-              src="https://i.pravatar.cc/24"
+              src={ProfileName}
               alt="repo"
               className="w-6 h-6 rounded-full"
             />
