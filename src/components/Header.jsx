@@ -3,12 +3,12 @@ import {
   Menu,
   Search,
   Plus,
-  Bell,
   Github,
   Users,
   CircleDot,
-  GitBranch,
-  Inbox,
+  GitPullRequest,
+  Monitor,
+  Package,
   ChevronDown,
 } from "lucide-react";
 
@@ -16,13 +16,13 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-[#0d1117] text-white border-b border-gray-800">
+    <header className="bg-[#0d1117] text-white border-b border-[#21262d]">
       <div className="flex items-center justify-between px-4 py-2">
 
         {/* LEFT */}
         <div className="flex items-center gap-3">
           <button
-            className="p-2 rounded-md hover:bg-gray-800 md:hidden"
+            className="p-2 rounded-md hover:bg-[#21262d] md:hidden"
             onClick={() => setOpen(!open)}
           >
             <Menu size={20} />
@@ -30,68 +30,80 @@ export default function Header() {
 
           <Github size={28} />
 
-          <span className="hidden md:block font-semibold text-lg">
+          <span className="hidden md:block text-[16px] font-semibold">
             Dashboard
           </span>
         </div>
 
-        {/* CENTER (Search) */}
-        <div className="hidden md:flex items-center bg-[#010409] border border-gray-700 rounded-md px-3 py-1 w-[300px] lg:w-[400px]">
+        {/* CENTER SEARCH */}
+        <div className="hidden md:flex items-center bg-[#010409] border border-[#30363d] rounded-md px-3 py-[6px] w-[320px] lg:w-[420px]">
           <Search size={16} className="text-gray-400" />
           <input
             type="text"
             placeholder="Type / to search"
-            className="bg-transparent outline-none px-2 text-sm w-full"
+            className="bg-transparent outline-none px-2 text-sm w-full placeholder:text-gray-400"
           />
+          <span className="text-xs text-gray-400 border border-[#30363d] rounded px-1">
+            /
+          </span>
         </div>
 
         {/* RIGHT */}
         <div className="flex items-center gap-2">
 
           {/* Mobile Search */}
-          <button className="md:hidden p-2 hover:bg-gray-800 rounded-md">
+          <button className="md:hidden p-2 hover:bg-[#21262d] rounded-md">
             <Search size={18} />
           </button>
 
-          {/* Team / Users */}
-          <div className="flex items-center border border-gray-700 rounded-md overflow-hidden">
-            <button className="p-2 hover:bg-gray-800">
+          {/* Team Button */}
+          <div className="flex items-center border border-[#30363d] rounded-md overflow-hidden">
+            <button className="p-2 hover:bg-[#21262d]">
               <Users size={16} />
             </button>
-            <button className="p-2 hover:bg-gray-800 border-l border-gray-700">
+            <button className="p-2 border-l border-[#30363d] hover:bg-[#21262d]">
               <ChevronDown size={14} />
             </button>
           </div>
 
           {/* Divider */}
-          <div className="h-6 w-px bg-gray-700 mx-1"></div>
+          <div className="h-6 w-px bg-[#30363d] mx-1"></div>
 
-          {/* Add (+) */}
-          <div className="flex items-center border border-gray-700 rounded-md overflow-hidden">
-            <button className="p-2 hover:bg-gray-800">
+          {/* Plus Button */}
+          <div className="flex items-center border border-[#30363d] rounded-md overflow-hidden">
+            <button className="p-2 hover:bg-[#21262d]">
               <Plus size={16} />
             </button>
-            <button className="p-2 hover:bg-gray-800 border-l border-gray-700">
+            <button className="p-2 border-l border-[#30363d] hover:bg-[#21262d]">
               <ChevronDown size={14} />
             </button>
           </div>
 
           {/* Issues */}
-          <button className="p-2 hover:bg-gray-800 rounded-md">
+          <button className="p-2 hover:bg-[#21262d] rounded-md">
             <CircleDot size={18} />
           </button>
 
           {/* Pull Requests */}
-          <button className="p-2 hover:bg-gray-800 rounded-md">
-            <GitBranch size={18} />
+          <button className="p-2 hover:bg-[#21262d] rounded-md">
+            <GitPullRequest size={18} />
+          </button>
+
+          {/* Codespaces */}
+          <button className="p-2 hover:bg-[#21262d] rounded-md">
+            <Monitor size={18} />
+          </button>
+
+          {/* Marketplace */}
+          <button className="p-2 hover:bg-[#21262d] rounded-md">
+            <Package size={18} />
           </button>
 
           {/* Notifications */}
           <div className="relative">
-            <button className="p-2 hover:bg-gray-800 rounded-md">
-              <Inbox size={18} />
+            <button className="p-2 hover:bg-[#21262d] rounded-md">
+              <CircleDot size={18} />
             </button>
-            {/* Blue dot */}
             <span className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full"></span>
           </div>
 
@@ -99,7 +111,7 @@ export default function Header() {
           <img
             src="https://i.pravatar.cc/30"
             alt="profile"
-            className="w-8 h-8 rounded-full border border-gray-600 cursor-pointer"
+            className="w-8 h-8 rounded-full border border-[#30363d] cursor-pointer"
           />
         </div>
       </div>
@@ -110,8 +122,8 @@ export default function Header() {
           <input
             type="text"
             placeholder="Search..."
-            className="w-full bg-[#010409] border border-gray-700 rounded-md px-3 py-2 text-sm outline-none"
-        />
+            className="w-full bg-[#010409] border border-[#30363d] rounded-md px-3 py-2 text-sm outline-none"
+          />
         </div>
       )}
     </header>
