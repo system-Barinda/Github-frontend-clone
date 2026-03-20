@@ -22,7 +22,7 @@ export default function Header() {
         {/* LEFT */}
         <div className="flex items-center gap-3">
           <button
-            className="p-2 rounded-md hover:bg-[#21262d] md:hidden"
+            className="p-2 rounded-md hover:bg-[#21262d] border-r border-t border-b border-l border-[#30363d] hover:bg-[#21262d]"
             onClick={() => setOpen(!open)}
           >
             <Menu size={20} />
