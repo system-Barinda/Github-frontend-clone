@@ -1,6 +1,6 @@
 export default function RightPanel() {
   return (
-    <div className="w-full lg:w-[320px] border border-[#30363d] rounded-xl p-4 space-y-4 bg-[#0d1117]">
+    <div className=" h-full w-full lg:w-[320px] border border-[#30363d] rounded-xl p-4 space-y-4 bg-[#0d1117]">
 
       <h3 className="font-semibold text-sm">
         Latest from our changelog

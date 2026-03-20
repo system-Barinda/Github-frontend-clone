@@ -22,7 +22,9 @@ export default function MainContent() {
           <button className="px-3 py-1 border border-[#30363d] rounded-md text-sm hover:bg-[#21262d]">
             Filter
           </button>
+          
         </div>
+        
 
         {/* Placeholder Feed */}
         <div className="h-40 border border-[#30363d] rounded-md flex items-center justify-center text-gray-400">
