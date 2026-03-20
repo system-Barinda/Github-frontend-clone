@@ -71,7 +71,7 @@ export default function Header() {
 
           {/* Plus Button */}
           <div className="flex items-center border border-[#30363d] rounded-md overflow-hidden">
-            <button className="p-2 hover:bg-[#21262d]">
+            <button className="p-2 hover:bg-[#21262d] ">
               <Plus size={16} />
             </button>
             <button className="p-2 border-l border-[#30363d] hover:bg-[#21262d]">
@@ -80,28 +80,24 @@ export default function Header() {
           </div>
 
           {/* Issues */}
-          <button className="p-2 hover:bg-[#21262d] rounded-md">
+          <button className="p-2 hover:bg-[#21262d] rounded-md border border-[#30363d]">
             <CircleDot size={18} />
           </button>
 
           {/* Pull Requests */}
-          <button className="p-2 hover:bg-[#21262d] rounded-md">
+          <button className="p-2 hover:bg-[#21262d] rounded-md border border-[#30363d]">
             <GitPullRequest size={18} />
           </button>
 
           {/* Codespaces */}
-          <button className="p-2 hover:bg-[#21262d] rounded-md">
+          <button className="p-2 hover:bg-[#21262d] rounded-md border border-[#30363d]">
             <Monitor size={18} />
           </button>
-
-          {/* Marketplace */}
-          <button className="p-2 hover:bg-[#21262d] rounded-md">
-            <Package size={18} />
-          </button>
+         
 
           {/* Notifications */}
           <div className="relative">
-            <button className="p-2 hover:bg-[#21262d] rounded-md">
+            <button className="p-2 hover:bg-[#21262d] rounded-md border border-[#30363d]">
               <CircleDot size={18} />
             </button>
             <span className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full"></span>
