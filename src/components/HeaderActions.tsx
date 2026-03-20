@@ -1,4 +1,5 @@
 import { Search,Plus,Users,CircleDot,GitPullRequest,Monitor,ChevronDown,} from "lucide-react";
+import ProfileName from "../assets/profileName.png"
 
 export default function HeaderActions() {
   return (
@@ -75,7 +76,7 @@ export default function HeaderActions() {
 
 
       <img
-        src="https://i.pravatar.cc/30"
+        src={ProfileName}
         alt="profile"
         className="w-8 h-8 rounded-full border border-[#30363d] cursor-pointer"
       />
