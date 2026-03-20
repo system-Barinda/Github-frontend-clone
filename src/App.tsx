@@ -1,5 +1,6 @@
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import MainContent from "./components/MainContent";
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
 
         {/* MAIN CONTENT */}
         <main className="flex-1 p-4 text-white">
-          Main Content
+          <MainContent />
         </main>
       </div>
 
