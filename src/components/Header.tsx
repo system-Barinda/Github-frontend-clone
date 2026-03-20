@@ -8,7 +8,6 @@ import {
   CircleDot,
   GitPullRequest,
   Monitor,
-  Package,
   ChevronDown,
 } from "lucide-react";
 
