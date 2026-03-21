@@ -1,5 +1,11 @@
 export default function Trending() {
-  const repos = [
+   type Repo = {
+  name: string;
+  language: string;
+  stars: number | string;
+  description: string;
+};
+  const repos:Repo[] = [
     {
       name: "math-inc/OpenGauss",
       language: "Python",
