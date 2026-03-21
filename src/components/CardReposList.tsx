@@ -1,4 +1,5 @@
-export default function CardReposList(){
+
+export default function CardReposList({repos}){
     return(
          <div className="flex flex-col">
         {repos.map((repo, index) => (

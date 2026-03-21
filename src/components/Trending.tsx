@@ -1,4 +1,5 @@
 import { repos } from "../services/Repositorytrending";
+import CardReposList from "./CardReposList"
 export default function Trending() {
  
 
@@ -19,7 +20,7 @@ export default function Trending() {
       </div>
 
       {/* Repo List */}
-     
+       <CardReposList repos={repos} />
     </div>
   );
 }
