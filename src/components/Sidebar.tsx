@@ -2,10 +2,7 @@ import { useState } from "react";
 import { ChevronDown, BookOpen } from "lucide-react";
 import ProfileName from "../assets/profileName.png"
 
-interface Repo {
-  id: number;
-  name: string;
-}
+
 
 export default function Sidebar() {
   const [search, setSearch] = useState("");
