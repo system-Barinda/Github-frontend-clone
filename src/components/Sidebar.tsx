@@ -1,26 +1,28 @@
 import { useState } from "react";
 import { ChevronDown, BookOpen } from "lucide-react";
-import ProfileName from "../assets/profileName.png"
+import ProfileName from "../assets/profileName.png";
 import { repos } from "../services/ReposotoryList";
-
 
 export default function Sidebar() {
   const [search, setSearch] = useState("");
+  const [showAll, setShowAll] = useState(false); 
 
+  // filter first
   const filteredRepos = repos.filter((repo) =>
     repo.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  // 👇 limit to 10 or show all
+  const visibleRepos = showAll
+    ? filteredRepos
+    : filteredRepos.slice(0, 10);
 
   return (
     <aside className="bg-[#0d1117] text-white w-full md:w-[300px] lg:w-[320px] border-r border-[#21262d] p-4">
 
       {/* USER */}
       <div className="flex items-center gap-3 mb-6">
-        <img
-          src={ProfileName}
-          alt="profile"
-          className="w-10 h-10 rounded-full"
-        />
+        <img src={ProfileName} alt="profile" className="w-10 h-10 rounded-full" />
 
         <div className="flex items-center gap-1 cursor-pointer">
           <span className="font-semibold text-sm">system-Barinda</span>
@@ -28,7 +30,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* TOP REPOS HEADER */}
+      {/* HEADER */}
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-sm font-semibold text-gray-300">
           Top repositories
@@ -51,7 +53,7 @@ export default function Sidebar() {
 
       {/* REPO LIST */}
       <div className="space-y-3">
-        {filteredRepos.map((repo) => (
+        {visibleRepos.map((repo) => (
           <div
             key={repo.id}
             className="flex items-center gap-2 cursor-pointer hover:text-blue-400"
@@ -66,10 +68,15 @@ export default function Sidebar() {
         ))}
       </div>
 
-      {/* SHOW MORE */}
-      <button className="mt-4 text-sm text-gray-400 hover:text-blue-400">
-        Show more
-      </button>
+      {/* SHOW MORE / LESS */}
+      {filteredRepos.length > 10 && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="mt-4 text-sm text-gray-400 hover:text-blue-400"
+        >
+          {showAll ? "Show less" : "Show more"}
+        </button>
+      )}
     </aside>
   );
 }
