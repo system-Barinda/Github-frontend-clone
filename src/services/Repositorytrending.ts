@@ -1,9 +1,4 @@
-  type Repo = {
-  name: string;
-  language: string;
-  stars: number | string;
-  description: string;
-};
+import type { Repo } from "../types/ReposType";
   export const repos:Repo[] = [
     {
       name: "math-inc/OpenGauss",
