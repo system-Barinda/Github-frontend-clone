@@ -1,4 +1,5 @@
-const repos: Repo[] = [
+import type { Repo } from "../types/ReposotoryListType";
+export const repos: Repo[] = [
   { id: 1, name: "system-Barinda/React-project-of-learning" },
   { id: 2, name: "system-Barinda/Learn-typeScript" },
   { id: 3, name: "system-Barinda/Event_Ticket_Booking_system" },

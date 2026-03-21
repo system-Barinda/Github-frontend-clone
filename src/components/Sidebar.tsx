@@ -1,21 +1,11 @@
 import { useState } from "react";
 import { ChevronDown, BookOpen } from "lucide-react";
 import ProfileName from "../assets/profileName.png"
-
+import { repos } from "../services/ReposotoryList";
 
 
 export default function Sidebar() {
   const [search, setSearch] = useState("");
-
-  const repos: Repo[] = [
-    { id: 1, name: "system-Barinda/React-project-of-learning" },
-    { id: 2, name: "system-Barinda/Learn-typeScript" },
-    { id: 3, name: "system-Barinda/Event_Ticket_Booking_system" },
-    { id: 4, name: "system-Barinda/JavaScript-practice-exercises" },
-    { id: 5, name: "system-Barinda/Learn-React-Router" },
-    { id: 6, name: "system-Barinda/myFrextTrading" },
-    { id: 7, name: "system-Barinda/java-learning" },
-  ];
 
   const filteredRepos = repos.filter((repo) =>
     repo.name.toLowerCase().includes(search.toLowerCase())
