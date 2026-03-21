@@ -13,7 +13,7 @@ export default function App() {
         <Sidebar />
 
         {/* MAIN CONTENT */}
-        <main className="flex-1 p-4 text-white">
+        <main className="flex-1 p-4 text-white ">
           <MainContent />
           <Footer />
         </main>
