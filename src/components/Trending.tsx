@@ -27,9 +27,7 @@ export default function Trending() {
           </a>
         </div>
 
-        <button className="bg-gray-800 border border-gray-700 px-3 py-1 rounded-md text-sm hover:bg-gray-700">
-          Filter
-        </button>
+        
       </div>
 
       {/* Repo List */}
