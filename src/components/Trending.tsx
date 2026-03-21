@@ -1,24 +1,6 @@
+import { repos } from "../services/Repositorytrending";
 export default function Trending() {
-   type Repo = {
-  name: string;
-  language: string;
-  stars: number | string;
-  description: string;
-};
-  const repos:Repo[] = [
-    {
-      name: "math-inc/OpenGauss",
-      language: "Python",
-      stars: 478,
-      description: "",
-    },
-    {
-      name: "FujiwaraChoki/MoneyPrinterV2",
-      language: "Python",
-      stars: "16.8k",
-      description: "Automate the process of making money online.",
-    },
-  ];
+ 
 
   return (
     <div className="bg-[#0d1117] border border-gray-700 rounded-lg p-4 w-full max-w-2xl mx-auto text-gray-300">
