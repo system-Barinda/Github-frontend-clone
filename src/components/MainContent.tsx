@@ -2,6 +2,7 @@ import AskBox from "./AskBox";
 import ActionButtons from "./ActionButtons";
 import FeedAlert from "./FeedAlert";
 import RightPanel from "./RightPanel";
+import Trending from "./Trending";
 
 export default function MainContent() {
   return (
@@ -27,9 +28,8 @@ export default function MainContent() {
         
 
         {/* Placeholder Feed */}
-        <div className="h-40 border border-[#30363d] rounded-md flex items-center justify-center text-gray-400">
-          No activity yet
-        </div>
+      
+         <Trending />
 
       </div>
 
